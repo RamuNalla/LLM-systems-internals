@@ -3,7 +3,7 @@ import torch
 import time
 
 # Matrix dimension (N x N)
-N = 1000
+N = 300
 
 # 1. Pure Python Implementation (Nested Loops)
 def pure_python_matmul(A, B):
@@ -28,8 +28,8 @@ print(f"Matrix Size: {N}x{N}\n" + "-"*30)
 # Note: For N=1000, Python loops can take ~100-200 seconds.
 start = time.time()
 # Uncomment the line below to actually run the Python version:
-# _ = pure_python_matmul(A_list, B_list) 
-python_time = 150.0  # Estimated average for N=1000
+_ = pure_python_matmul(A_list, B_list) 
+python_time = time.time() - start
 print(f"1. Pure Python: ~{python_time:.4f} sec (Estimated)")
 
 # --- Execution: NumPy (CPU) ---
